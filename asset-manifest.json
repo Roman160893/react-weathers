@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/react-weathers/static/css/main.59fe9bc4.css",
+    "main.js": "/react-weathers/static/js/main.24096e94.js",
+    "static/media/bg.mp4": "/react-weathers/static/media/bg.25bc4e7e20938c10dd7d.mp4",
+    "static/media/13n.svg": "/react-weathers/static/media/13n.de885d2b644a13e3d3f93a064c2df661.svg",
+    "static/media/13d.svg": "/react-weathers/static/media/13d.acfc47e0e5de31797bf874d1dbebd420.svg",
+    "static/media/11n.svg": "/react-weathers/static/media/11n.89420ad48c15f69cd853f6954f7ee6be.svg",
+    "static/media/11d.svg": "/react-weathers/static/media/11d.d02e3519f73dcd5d773a9a754300320c.svg",
+    "static/media/09n.svg": "/react-weathers/static/media/09n.0543b17353eed7f2b148fbb954d1139a.svg",
+    "static/media/09d.svg": "/react-weathers/static/media/09d.a8b2c5aae03a67a17da1c42b1b93ca85.svg",
+    "static/media/10n.svg": "/react-weathers/static/media/10n.cad99d504aa08fee290f6925b35e0c26.svg",
+    "static/media/10d.svg": "/react-weathers/static/media/10d.09bf504b035763863170815f34eb8816.svg",
+    "static/media/04d.svg": "/react-weathers/static/media/04d.fc81da5d70e5cb85c06249dfd038f3a5.svg",
+    "static/media/04n.svg": "/react-weathers/static/media/04n.58ade12c655f127438cf743a3ecac3b3.svg",
+    "static/media/03d.svg": "/react-weathers/static/media/03d.98ccbaba5ac2fff98a7c16bfd8d06990.svg",
+    "static/media/03n.svg": "/react-weathers/static/media/03n.98ccbaba5ac2fff98a7c16bfd8d06990.svg",
+    "static/media/01d.svg": "/react-weathers/static/media/01d.81717d99dc85543595920d4933510e33.svg",
+    "static/media/02d.svg": "/react-weathers/static/media/02d.9a05e4118367cc2898039437a157cff7.svg",
+    "static/media/02n.svg": "/react-weathers/static/media/02n.6c69e322e13bee3420f35f272a854176.svg",
+    "index.html": "/react-weathers/index.html",
+    "static/media/01n.svg": "/react-weathers/static/media/01n.99cdbbd125fbc72118dd35fb9c7d5ecf.svg",
+    "static/media/50d.svg": "/react-weathers/static/media/50d.116dc1130ee7f4aa8a5730f83fd7099e.svg",
+    "static/media/50n.svg": "/react-weathers/static/media/50n.116dc1130ee7f4aa8a5730f83fd7099e.svg",
+    "main.59fe9bc4.css.map": "/react-weathers/static/css/main.59fe9bc4.css.map",
+    "main.24096e94.js.map": "/react-weathers/static/js/main.24096e94.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59fe9bc4.css",
+    "static/js/main.24096e94.js"
+  ]
+}
