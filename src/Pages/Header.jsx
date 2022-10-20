@@ -18,11 +18,14 @@ const Header = () => {
    }, [onRequest])
 
    const handleOnRequest = (e) => {
-      if (e.code === 'Enter' || e.code === 'NumpadEnter' || !e.code) {
-         setOnRequest(!onRequest)
-         dispatch(setValueInputCity(valueCity))
-         setValueCity('')
-      }
+      // if (e.code === 'Enter' || e.code === 'NumpadEnter' || !e.code) {
+      // setOnRequest(!onRequest)
+      // dispatch(setValueInputCity(valueCity))
+      // setValueCity('')
+      // }
+      setOnRequest(!onRequest)
+      dispatch(setValueInputCity(valueCity))
+      setValueCity('')
    }
 
    return (
@@ -34,7 +37,7 @@ const Header = () => {
                   <input
                      value={valueCity}
                      onChange={(e) => setValueCity(e.target.value)}
-                     onKeyDown={handleOnRequest}
+                     // onKeyDown={handleOnRequest}
                      placeholder='Введіть місто...'
                   />
                   <FontAwesomeIcon icon={faLocationDot} />
