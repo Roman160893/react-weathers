@@ -17,16 +17,19 @@ const Header = () => {
       dispatch(fetchWeathers(valueInputCity));
    }, [onRequest])
 
-   const handleOnRequest = (e) => {
-      // if (e.code === 'Enter' || e.code === 'NumpadEnter' || !e.code) {
-      // setOnRequest(!onRequest)
-      // dispatch(setValueInputCity(valueCity))
-      // setValueCity('')
-      // }
-      setOnRequest(!onRequest)
-      dispatch(setValueInputCity(valueCity))
-      setValueCity('')
+   const handleOnRequestKey = (e) => {
+      if (e.code === 'Enter' || e.code === 'NumpadEnter' || e.mouseDown || e.type === 'click') {
+         setOnRequest(!onRequest)
+         dispatch(setValueInputCity(valueCity))
+         setValueCity('')
+      }
    }
+
+   // const handleOnRequestMouse = (e) => {
+   //    setOnRequest(!onRequest)
+   //    dispatch(setValueInputCity(valueCity))
+   //    setValueCity('')
+   // }
 
    return (
       <header className='weather__header header'>
@@ -37,14 +40,14 @@ const Header = () => {
                   <input
                      value={valueCity}
                      onChange={(e) => setValueCity(e.target.value)}
-                     // onKeyDown={handleOnRequest}
+                     onKeyDown={handleOnRequestKey}
                      placeholder='Введіть місто...'
                   />
                   <FontAwesomeIcon icon={faLocationDot} />
                </div>
                <div
                   className='header__icon'
-                  onClick={handleOnRequest}
+                  onClick={handleOnRequestKey}
                >
                   <FontAwesomeIcon icon={faMagnifyingGlass} />
                </div>
