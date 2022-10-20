@@ -1,0 +1,20 @@
+// colors
+$bg:linear-gradient(189deg, rgba(150,115,176,1) 26%, rgba(177,134,186,1) 60%);
+$bg-btn: #b59ecae3;
+$bg-btn-hover: '';
+$bg-input: rgba(198, 184, 210, 0.697);
+$black: black;
+$gray: gray;
+$gray-opacity: rgba(16, 86, 140, 0.821); 
+$white: white;
+$wheat: wheat;
+
+//font-size 
+$sixteen: 16px;
+
+@mixin border {
+   border: 1px solid;
+   background: $gray-opacity;
+   border-radius: 10px;
+}
+
