@@ -1,30 +1,28 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Slider from "react-slick";
+import { settings } from '../assets/consts';
 
 import { SceletonMain, WeathersNow, WeathersFuture } from '../Components/index'
+import SceletonMainMobile from '../Components/Sceleton/SceletonMainMobile';
 
 const Main = () => {
 
+   const [onWindowWidth, setOnWindowWidth] = React.useState(0)
    const { weathers, isLoaded, dateNow } = useSelector(({ weathers }) => weathers)
 
-   const settings = {
-      className: "center",
-      infinite: false,
-      centerPadding: "60px",
-      slidesToShow: 6,
-      swipeToSlide: true,
-      responsive: [
-         {
-            breakpoint: 600,
-            settings: {
-               slidesToShow: 4,
-               slidesToScroll: 1,
-               initialSlide: 1
-            }
-         }
-      ]
-   };
+   const resizeHandler = () => {
+      setOnWindowWidth(window.innerWidth)
+   }
+
+   React.useEffect(() => {
+      window.addEventListener("resize", resizeHandler);
+      resizeHandler();
+      return () => {
+         window.removeEventListener("resize", resizeHandler);
+      };
+   }, [])
+
    return (
       <div className='main-content'>
          {
@@ -47,7 +45,11 @@ const Main = () => {
                   </div>
                </>
                :
-               <SceletonMain />
+               <>
+                  {
+                     onWindowWidth > 410 ? <SceletonMain /> : <SceletonMainMobile />
+                  }
+               </>
          }
       </div>
    );

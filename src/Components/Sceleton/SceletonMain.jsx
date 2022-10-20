@@ -3,6 +3,7 @@ import React from 'react';
 import ContentLoader from "react-content-loader"
 
 const SceletonMain = () => {
+
    return (
       <ContentLoader
          speed={2}
@@ -11,6 +12,7 @@ const SceletonMain = () => {
          viewBox="0 0 970 650"
          backgroundColor="#606cc3"
          foregroundColor="#656d95"
+         className='sceleton'
       >
          <rect x="0" y="0" rx="10" ry="10" width="350" height="300" />
          <rect x="370" y="26" rx="10" ry="10" width="280" height="60" />
