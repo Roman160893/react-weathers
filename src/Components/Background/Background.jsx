@@ -5,9 +5,9 @@ const Background = () => {
    return (
       <video
          className='video'
-      // autoPlay
-      // loop
-      // muted
+         autoPlay
+         loop
+         muted
       >
          <source src={bg} />
       </video>
