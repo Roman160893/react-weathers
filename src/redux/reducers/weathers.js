@@ -13,8 +13,7 @@ const initialState = {
    }
 }
 
-const upperCase = (srt) => srt[0].toUpperCase() + srt.slice(1).toLowerCase()
-
+const upperCase = (srt) => (srt[0].toUpperCase() + srt.slice(1).toLowerCase()).trim()
 function weathers(state = initialState, action) {
    switch (action.type) {
       case GET_WEATHER: {

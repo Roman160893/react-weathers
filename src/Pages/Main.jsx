@@ -47,7 +47,7 @@ const Main = () => {
                :
                <>
                   {
-                     onWindowWidth > 410 ? <SceletonMain /> : <SceletonMainMobile />
+                     onWindowWidth > 960 ? <SceletonMain /> : <SceletonMainMobile />
                   }
                </>
          }
