@@ -8,15 +8,14 @@ import './style/app.scss'
 function App() {
 
   return (
-    <>
+
+    <div className='wrapper'>
       <Background />
-      <div className='wrapper'>
-        <div className='weather weather__container'>
-          <Header />
-          <Main />
-        </div>
+      <div className='weather weather__container'>
+        <Header />
+        <Main />
       </div>
-    </>
+    </div>
   );
 }
 

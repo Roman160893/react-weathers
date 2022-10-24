@@ -7,15 +7,13 @@
    font-family: 'Nunito', sans-serif;
 }
 
-#root{
-   width: 100%;
-   height: 100vh;
-}
+
 
 .wrapper {
    padding: 20px;
    width: 100%;
    height: 100vh;
+
    position: relative;
    overflow: scroll;
    &::-webkit-scrollbar { width: 0; }
@@ -50,7 +48,7 @@
 }
 
 .video{
-   position: absolute;
+   position: fixed;
    width: 100%;
    height: 100%;
    left: 50%;
