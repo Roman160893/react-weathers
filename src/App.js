@@ -1,22 +1,18 @@
 import React from 'react';
 
-import { Background } from './Components/';
-import Header from './Pages/Header'
-import Main from './Pages/Main'
-import './style/app.scss'
+import { Background } from './components/';
+import Header from './pages/Header';
+import Main from './pages/Main';
+import './style/app.scss';
 
-function App() {
-
-  return (
-
-    <div className='wrapper'>
-      <Background />
-      <div className='weather weather__container'>
-        <Header />
-        <Main />
-      </div>
+const App = () => (
+  <div className="wrapper">
+    <Background />
+    <div className="weather weather__container">
+      <Header />
+      <Main />
     </div>
-  );
-}
+  </div>
+);
 
 export default App;

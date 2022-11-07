@@ -1,10 +1,8 @@
-import WeathersNow from './WeathersNow/WeathersNow'
-import WeathersFuture from './WeathersFuture/WeathersFuture'
-import WeatherDescription from './WeatherDescription/WeatherDescription'
-import SceletonMain from './Sceleton/SceletonMain'
-import FallOut from './FallOut/FallOut'
-import Background from './Background/Background'
+import WeathersNow from './weathersNow/WeathersNow';
+import WeathersFuture from './weathersFuture/WeathersFuture';
+import WeatherDescription from './weatherDescription/WeatherDescription';
+import SceletonMain from './sceleton/SceletonMain';
+import FallOut from './fallOut/FallOut';
+import Background from './background/Background';
 
-export {
-   WeathersNow, SceletonMain, WeathersFuture, FallOut, Background, WeatherDescription
-}
+export { WeathersNow, SceletonMain, WeathersFuture, FallOut, Background, WeatherDescription };

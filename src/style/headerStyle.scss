@@ -1,108 +1,116 @@
-.header {
-   max-width: 980px;
-   margin: 0 auto 20px auto;
-   @include border;
-   &__search {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5px;
-      @media screen and (max-width: 560px) {
-         justify-content: center;
-         flex-direction: column-reverse;
-      }
-      & h1 {
-         margin-left: 10px;
-         font-weight: 700;
-         flex: 0 1 auto;
-         @media screen and (max-width: 768px) {
-               font-size: 36px;
-         }
-      }
-      &-block {
-         flex: 1 1 40%;
-         display: flex;
-         
-         justify-content: flex-end;
-         justify-self: flex-end;
-         align-items: center;
-         @media screen and (max-width: 560px) {
-            flex: 1 1 100%;
-            width: 100%;
-            justify-content: center;
-         }
-      }
-   }
-   &__input {
-      position: relative;
-      margin: 0px 20px;
-      width: 100%;
-      max-width: 300px;
-      @media screen and (max-width: 560px) {
-         max-width: none;
-         width: 100%;
-      }
-      & input{
-         background: $bg-input;
-         width: 100%;
-         border: 1px $gray;
-         padding: 10px 5px;
-         box-sizing: border-box;
-         border-radius: 20px;
-         text-indent: 30px;
-         font-weight: 800;
-         color: $white;
-         font-size: 18px;
-         transition: all 0.3s linear;
-         cursor: pointer;
-         &:focus {
-            box-shadow: 0px 0px 4px 2px rgba(83, 5, 143, 0.542);
-            background: $bg-btn;
-            color: $black;
-         }
-         &::placeholder {
-            color: $white;
-            font-family: 'Nunito';
-            font-size: 18px;
-         }
-      }
-      & svg {
-         position: absolute;
-         left: 12px;
-         top: 12px;
-         font-size: 20px;
-      }
-      @media screen and (max-width: 768px) {
-         margin: 5px 5px;
-      }
-   }
-   &__icon {
-      width: 40px;
-      height: 40px;
-      background: $bg-btn;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      transition: all .3s;
-      cursor: pointer;
-      margin: 0px 10px;
-      & svg {
-         transition: all 0.2s;
-      }
-      &:hover {
-         background: $bg-input;
-         & svg {
-            transform: scale(1.2);
-         }
-      }
-      @media screen and (max-width: 768px) {
-         margin: 0px 5px;
-      }
-      &:active {
-         transform: translateY(1px);
-      }
-   }
-}
+@import './mixins';
 
+.header {
+  max-width: 980px;
+  margin: 0 auto 20px auto;
+  @include border;
+
+  &__search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    @media screen and (max-width: 560px) {
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+
+    h1 {
+      margin-left: 10px;
+      font-weight: 700;
+      flex: 0 1 auto;
+      @media screen and (max-width: 768px) {
+        font-size: 36px;
+      }
+    }
+
+    &-block {
+      flex: 1 1 40%;
+      display: flex;
+      justify-content: flex-end;
+      justify-self: flex-end;
+      align-items: center;
+      @media screen and (max-width: 560px) {
+        flex: 1 1 100%;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__input {
+    position: relative;
+    margin: 0px 20px;
+    width: 100%;
+    max-width: 300px;
+    @media screen and (max-width: 560px) {
+      max-width: none;
+      width: 100%;
+    }
+
+    & input {
+      background: $bg-input;
+      width: 100%;
+      border: 1px $gray;
+      padding: 10px 5px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      text-indent: 30px;
+      font-weight: 800;
+      color: $white;
+      font-size: 18px;
+      transition: all 0.3s linear;
+      cursor: pointer;
+      &:focus {
+        box-shadow: 0px 0px 4px 2px rgba(83, 5, 143, 0.542);
+        background: $bg-btn;
+        color: $black;
+      }
+      &::placeholder {
+        color: $white;
+        font-family: 'Nunito';
+        font-size: 18px;
+      }
+    }
+
+    & svg {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 5px 5px;
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    background: $bg-btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 0px 10px;
+    & svg {
+      transition: all 0.2s;
+    }
+    &:hover {
+      background: $bg-input;
+      & svg {
+        transform: scale(1.2);
+      }
+    }
+    &:active {
+      transform: translateY(1px);
+    }
+    @media screen and (max-width: 768px) {
+      margin: 0px 5px;
+    }
+  }
+}

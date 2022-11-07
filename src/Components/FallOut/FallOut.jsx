@@ -1,45 +1,42 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-import './FallOutStyle.scss'
+import './FallOutStyle.scss';
 
 const FallOut = ({ pop }) => {
+  const svgRef = useRef();
 
-   const svgRef = useRef()
+  const [radius, setRadius] = useState(0);
 
-   const [radius, setRadius] = useState(0)
+  const circumference = useMemo(() => 2 * Math.PI * radius, [radius]);
+  const percent = useMemo(() => Math.floor(pop && pop * 100), [pop]);
 
-   useEffect(() => {
-      setRadius(svgRef.current.r.baseVal.value)
-   }, [])
+  const setProgress = (percent) => circumference - (percent / 100) * circumference;
 
-   const circumference = 2 * Math.PI * radius
-   const percent = Math.floor(pop && pop * 100)
+  useEffect(() => {
+    setRadius(svgRef.current.r.baseVal.value);
+  }, []);
 
-   function setProgress(percent) {
-      const offset = circumference - percent / 100 * circumference
-      return offset;
-   }
-
-   return (
-      <div className='fallout'>
-         <div className='fallout__title'>Ймовірність <br></br> опадів {percent}%</div>
-         <svg className='fallout__progress' width='150px' height='150px' >
-            <circle
-               ref={svgRef}
-               className='fallout__progress-circl'
-               stroke="white"
-               strokeWidth="10px"
-               cx='74'
-               cy='74'
-               r='67'
-               fill='transparent'
-               strokeDasharray={`${circumference} ${circumference}`}
-               strokeDashoffset={setProgress(percent)}
-            >
-            </circle>
-         </svg>
+  return (
+    <div className="fallout">
+      <div className="fallout__title">
+        Ймовірність <br></br> опадів {percent}%
       </div>
-   );
+      <svg className="fallout__progress" width="150px" height="150px">
+        <circle
+          ref={svgRef}
+          className="fallout__progress-circl"
+          stroke="white"
+          strokeWidth="10px"
+          cx="74"
+          cy="74"
+          r="67"
+          fill="transparent"
+          strokeDasharray={`${circumference} ${circumference}`}
+          strokeDashoffset={setProgress(percent)}
+        />
+      </svg>
+    </div>
+  );
 };
 
 export default FallOut;
